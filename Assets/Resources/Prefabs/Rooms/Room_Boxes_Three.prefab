@@ -218,6 +218,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5670148867320623737}
   - component: {fileID: 2591250567956350866}
+  - component: {fileID: 899036467659067034}
   m_Layer: 0
   m_Name: blocking_box (8)
   m_TagString: Untagged
@@ -292,6 +293,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &899036467659067034
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232082823142827826}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.38, y: 1.25}
+    newSize: {x: 1.38, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.38, y: 1.25}
+  m_EdgeRadius: 0
 --- !u!1 &234935639407424112
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,6 +329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2421537565666410120}
   - component: {fileID: 2116146609194571528}
+  - component: {fileID: 3257396929405286480}
   m_Layer: 0
   m_Name: blocking_box (6)
   m_TagString: Untagged
@@ -376,6 +404,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &3257396929405286480
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234935639407424112}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.38, y: 1.25}
+    newSize: {x: 1.38, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.38, y: 1.25}
+  m_EdgeRadius: 0
 --- !u!1 &407933015519821883
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,6 +679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 220590220343383741}
   - component: {fileID: 8771946100656105938}
+  - component: {fileID: 8606792525041689778}
   m_Layer: 0
   m_Name: right_wall
   m_TagString: Untagged
@@ -699,6 +754,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &8606792525041689778
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865017455486187964}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.41550332, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.11, y: 10.48}
+    newSize: {x: 2.11, y: 10.48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.2728168, y: 10.48}
+  m_EdgeRadius: 0
 --- !u!1 &951702234503417208
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,6 +874,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4343104208224662909}
   - component: {fileID: 270274823289533230}
+  - component: {fileID: 4590893379159148255}
   m_Layer: 0
   m_Name: blocking_box (5)
   m_TagString: Untagged
@@ -867,6 +949,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &4590893379159148255
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993605539582210976}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.38, y: 1.25}
+    newSize: {x: 1.38, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.38, y: 1.25}
+  m_EdgeRadius: 0
 --- !u!1 &1148466097453673776
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,6 +985,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4869121331089452881}
   - component: {fileID: 431531332297068887}
+  - component: {fileID: 878088933902919075}
   m_Layer: 0
   m_Name: left_wall
   m_TagString: Untagged
@@ -951,6 +1060,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &878088933902919075
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148466097453673776}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.41859093, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.11, y: 10.48}
+    newSize: {x: 2.11, y: 10.48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.2728181, y: 10.48}
+  m_EdgeRadius: 0
 --- !u!1 &1161290274014105468
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,6 +1180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7630227183330343266}
   - component: {fileID: 7898899924244151281}
+  - component: {fileID: 1327061770643732722}
   m_Layer: 0
   m_Name: blocking_box (12)
   m_TagString: Untagged
@@ -1119,6 +1255,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1327061770643732722
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316670702792470603}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.38, y: 1.25}
+    newSize: {x: 1.38, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.38, y: 1.25}
+  m_EdgeRadius: 0
 --- !u!1 &1341269035651881317
 GameObject:
   m_ObjectHideFlags: 0
@@ -1213,6 +1375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7575970094892045937}
   - component: {fileID: 8489962232050157296}
+  - component: {fileID: 8864976721603714862}
   m_Layer: 0
   m_Name: blocking_box (16)
   m_TagString: Untagged
@@ -1287,6 +1450,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &8864976721603714862
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369986925920014457}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.38, y: 1.25}
+    newSize: {x: 1.38, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.38, y: 1.25}
+  m_EdgeRadius: 0
 --- !u!1 &1750681095655036721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1633,6 +1822,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5548859057482709329}
   - component: {fileID: 3547578007063765081}
+  - component: {fileID: 2142007102141910896}
   m_Layer: 0
   m_Name: blocking_box (4)
   m_TagString: Untagged
@@ -1707,6 +1897,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2142007102141910896
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092241107022489977}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.38, y: 1.25}
+    newSize: {x: 1.38, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.38, y: 1.25}
+  m_EdgeRadius: 0
 --- !u!1 &2527473720960002430
 GameObject:
   m_ObjectHideFlags: 0
@@ -1717,6 +1933,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5009515465514437490}
   - component: {fileID: 208444413192072557}
+  - component: {fileID: 1152932518526584954}
   m_Layer: 0
   m_Name: blocking_box (18)
   m_TagString: Untagged
@@ -1791,6 +2008,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1152932518526584954
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2527473720960002430}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.38, y: 1.25}
+    newSize: {x: 1.38, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.38, y: 1.25}
+  m_EdgeRadius: 0
 --- !u!1 &2804868013006159947
 GameObject:
   m_ObjectHideFlags: 0
@@ -2629,6 +2872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6060530440719211456}
   - component: {fileID: 4541519014881008994}
+  - component: {fileID: 2871839354026120436}
   m_Layer: 0
   m_Name: blocking_box (10)
   m_TagString: Untagged
@@ -2703,6 +2947,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2871839354026120436
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3813940259523412017}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.38, y: 1.25}
+    newSize: {x: 1.38, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.38, y: 1.25}
+  m_EdgeRadius: 0
 --- !u!1 &3868981134086562308
 GameObject:
   m_ObjectHideFlags: 0
@@ -2713,6 +2983,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4968630309142696983}
   - component: {fileID: 5346314332230110479}
+  - component: {fileID: 9119690312136163910}
   m_Layer: 0
   m_Name: blocking_box (1)
   m_TagString: Untagged
@@ -2787,6 +3058,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &9119690312136163910
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3868981134086562308}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.38, y: 1.25}
+    newSize: {x: 1.38, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.38, y: 1.25}
+  m_EdgeRadius: 0
 --- !u!1 &3971045773551759018
 GameObject:
   m_ObjectHideFlags: 0
@@ -2881,6 +3178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5086927472039094437}
   - component: {fileID: 8354619326145240735}
+  - component: {fileID: 9173612741533921137}
   m_Layer: 0
   m_Name: blocking_box
   m_TagString: Untagged
@@ -2955,6 +3253,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &9173612741533921137
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4042069126359036098}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.38, y: 1.25}
+    newSize: {x: 1.38, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.38, y: 1.25}
+  m_EdgeRadius: 0
 --- !u!1 &4147636250987429163
 GameObject:
   m_ObjectHideFlags: 0
@@ -3217,6 +3541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8588548698116936661}
   - component: {fileID: 3441532830668370974}
+  - component: {fileID: 8175911075812960635}
   m_Layer: 0
   m_Name: blocking_box (2)
   m_TagString: Untagged
@@ -3291,6 +3616,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &8175911075812960635
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4773908673500045526}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.38, y: 1.25}
+    newSize: {x: 1.38, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.38, y: 1.25}
+  m_EdgeRadius: 0
 --- !u!1 &5007686246358245869
 GameObject:
   m_ObjectHideFlags: 0
@@ -3553,6 +3904,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6688362712063578178}
   - component: {fileID: 4835983916728098422}
+  - component: {fileID: 6508611527330037960}
   m_Layer: 0
   m_Name: top_wall
   m_TagString: Untagged
@@ -3627,6 +3979,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &6508611527330037960
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5226106442309824589}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.4138848}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 16.48, y: 2.11}
+    newSize: {x: 16.48, y: 2.11}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.48, y: 1.28223}
+  m_EdgeRadius: 0
 --- !u!1 &5266944321821444624
 GameObject:
   m_ObjectHideFlags: 0
@@ -3889,6 +4267,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8965789076530457830}
   - component: {fileID: 1640194494065234047}
+  - component: {fileID: 8536453066925865169}
   m_Layer: 0
   m_Name: blocking_box (14)
   m_TagString: Untagged
@@ -3963,6 +4342,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &8536453066925865169
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5573984976931049773}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.38, y: 1.25}
+    newSize: {x: 1.38, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.38, y: 1.25}
+  m_EdgeRadius: 0
 --- !u!1 &5807815422077963055
 GameObject:
   m_ObjectHideFlags: 0
@@ -4141,6 +4546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7717561356092091919}
   - component: {fileID: 6691895873762727405}
+  - component: {fileID: 7583189316324404373}
   m_Layer: 0
   m_Name: blocking_box (9)
   m_TagString: Untagged
@@ -4215,6 +4621,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &7583189316324404373
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6214417802554955220}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.38, y: 1.25}
+    newSize: {x: 1.38, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.38, y: 1.25}
+  m_EdgeRadius: 0
 --- !u!1 &6339229747171933813
 GameObject:
   m_ObjectHideFlags: 0
@@ -4349,6 +4781,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7380302155777297440}
   - component: {fileID: 3883792650715860323}
+  - component: {fileID: 4295637247666415974}
   m_Layer: 0
   m_Name: bot_wall
   m_TagString: Untagged
@@ -4423,6 +4856,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &4295637247666415974
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6531542488991870687}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.4138847}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 16.48, y: 2.11}
+    newSize: {x: 16.48, y: 2.11}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.48, y: 1.2822303}
+  m_EdgeRadius: 0
 --- !u!1 &6566258268544827651
 GameObject:
   m_ObjectHideFlags: 0
@@ -4636,6 +5095,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4285689784456357791}
   - component: {fileID: 8524088108657804231}
+  - component: {fileID: 7029368129651773397}
   m_Layer: 0
   m_Name: blocking_box (15)
   m_TagString: Untagged
@@ -4710,6 +5170,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &7029368129651773397
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6788473670816009258}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.38, y: 1.25}
+    newSize: {x: 1.38, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.38, y: 1.25}
+  m_EdgeRadius: 0
 --- !u!1 &6914376754116368321
 GameObject:
   m_ObjectHideFlags: 0
@@ -4803,6 +5289,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2728343665071462187}
+  - component: {fileID: 6598154231751934803}
+  - component: {fileID: -3499414161064689944}
   m_Layer: 0
   m_Name: Room_Boxes_Three
   m_TagString: Untagged
@@ -4829,6 +5317,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &6598154231751934803
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7265248588325547522}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.01564598, y: 0.006893396}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 15.33035, y: 7.318449}
+  m_EdgeRadius: 0
+--- !u!114 &-3499414161064689944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7265248588325547522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2bb511b603d1a498bf258a53469714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7349921783759756804
 GameObject:
   m_ObjectHideFlags: 0
@@ -4839,6 +5365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5867654218461046327}
   - component: {fileID: 829029740154173090}
+  - component: {fileID: 3260276582610339520}
   m_Layer: 0
   m_Name: blocking_box (17)
   m_TagString: Untagged
@@ -4913,6 +5440,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &3260276582610339520
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7349921783759756804}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.38, y: 1.25}
+    newSize: {x: 1.38, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.38, y: 1.25}
+  m_EdgeRadius: 0
 --- !u!1 &7376844716499147334
 GameObject:
   m_ObjectHideFlags: 0
@@ -5047,6 +5600,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1371204535777763661}
   - component: {fileID: 2796504401262429288}
+  - component: {fileID: 3035222518599488807}
   m_Layer: 0
   m_Name: blocking_box (11)
   m_TagString: Untagged
@@ -5121,6 +5675,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &3035222518599488807
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7502262677653204592}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.38, y: 1.25}
+    newSize: {x: 1.38, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.38, y: 1.25}
+  m_EdgeRadius: 0
 --- !u!1 &7794557375457250057
 GameObject:
   m_ObjectHideFlags: 0
@@ -5131,6 +5711,7 @@ GameObject:
   m_Component:
   - component: {fileID: 19111840894240716}
   - component: {fileID: 413499222011496295}
+  - component: {fileID: 6326078409699711450}
   m_Layer: 0
   m_Name: blocking_box (3)
   m_TagString: Untagged
@@ -5205,6 +5786,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &6326078409699711450
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7794557375457250057}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.38, y: 1.25}
+    newSize: {x: 1.38, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.38, y: 1.25}
+  m_EdgeRadius: 0
 --- !u!1 &7849358121127746996
 GameObject:
   m_ObjectHideFlags: 0
@@ -5215,6 +5822,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8149062424093165796}
   - component: {fileID: 8706648950795161988}
+  - component: {fileID: 686731090582990256}
   m_Layer: 0
   m_Name: blocking_box (7)
   m_TagString: Untagged
@@ -5289,6 +5897,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &686731090582990256
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7849358121127746996}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.38, y: 1.25}
+    newSize: {x: 1.38, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.38, y: 1.25}
+  m_EdgeRadius: 0
 --- !u!1 &7900674171046385887
 GameObject:
   m_ObjectHideFlags: 0

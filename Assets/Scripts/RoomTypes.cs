@@ -1,0 +1,1 @@
+public enum RoomTypes{ START = 0, HEALTH, BOSS, NORMAL, INVALID}
