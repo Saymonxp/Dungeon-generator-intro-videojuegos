@@ -43,7 +43,8 @@ GameObject:
   - component: {fileID: 4477567810585623950}
   - component: {fileID: 3909823470287347074}
   - component: {fileID: 744860525978950650}
-  - component: {fileID: 1663430970576331914}
+  - component: {fileID: 7086322602162313997}
+  - component: {fileID: 8015809853090880841}
   m_Layer: 0
   m_Name: GreenMonster
   m_TagString: Untagged
@@ -139,8 +140,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!61 &1663430970576331914
-BoxCollider2D:
+--- !u!58 &7086322602162313997
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -152,16 +153,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.21, y: 1.235}
-    newSize: {x: 1.21, y: 1.235}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: 0.012406826}
   serializedVersion: 2
-  m_Size: {x: 1.21, y: 1.235}
-  m_EdgeRadius: 0
+  m_Radius: 0.5873693
+--- !u!114 &8015809853090880841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404358880672170731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b0c88b24c0a8bc4db3207f062589172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class GreenMonster : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    [SerializeField] int health = 1;
+    
+    public void TakeDamage() {
+        health--;
     }
 }
