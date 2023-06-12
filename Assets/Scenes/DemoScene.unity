@@ -377,6 +377,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8015809853090880841, guid: 0ce5d754465073341bc8f66affe39967, type: 3}
+      propertyPath: speed
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015809853090880841, guid: 0ce5d754465073341bc8f66affe39967, type: 3}
+      propertyPath: health
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015809853090880841, guid: 0ce5d754465073341bc8f66affe39967, type: 3}
+      propertyPath: <TotalHealthPoints>k__BackingField
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce5d754465073341bc8f66affe39967, type: 3}
 --- !u!1001 &6525142997948165651

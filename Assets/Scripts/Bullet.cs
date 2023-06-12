@@ -62,7 +62,7 @@ public class Bullet : MonoBehaviour
                 targetHit.TakeHit();
             }
             if (hit.collider.gameObject.CompareTag("Enemy")) {
-                hit.collider.gameObject.GetComponent<GreenMonster>().TakeDamage();
+                hit.collider.gameObject.GetComponent<GreenMonster>().TakeHit();
             }            
             Debug.Log("Hit with " + hit.collider.name);
             DestroyProjectile();
