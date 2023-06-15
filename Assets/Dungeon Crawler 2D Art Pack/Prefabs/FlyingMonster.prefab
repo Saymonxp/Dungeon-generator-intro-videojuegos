@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 7937045391287259478}
   - component: {fileID: 4418831511671466787}
   - component: {fileID: 3974056479318294290}
-  - component: {fileID: 1474104635536163124}
+  - component: {fileID: 1121985783990309203}
   m_Layer: 0
   m_Name: FlyingMonster
   m_TagString: Untagged
@@ -156,7 +156,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.23850262}
   serializedVersion: 2
   m_Radius: 0.5077621
---- !u!114 &1474104635536163124
+--- !u!114 &1121985783990309203
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,7 +165,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7784388618673046924}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 504e38cd27ff0224ea8a77dbcdcccad7, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d980574a22f04e42b489eac7cffe6f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  <TotalHealthPoints>k__BackingField: 2
+  speed: 0.4

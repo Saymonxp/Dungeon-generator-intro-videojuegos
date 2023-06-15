@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GreenMonster : MonoBehaviour, IDamageable
+public class Enemy : MonoBehaviour, IDamageable
 {
     Transform player;
     [field:SerializeField]

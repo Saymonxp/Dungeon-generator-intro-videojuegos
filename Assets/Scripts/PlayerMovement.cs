@@ -69,8 +69,8 @@ public class PlayerMovement : MonoBehaviour
         
     }
     
-    private void FixedUpdate()
-    {
-        _rb.velocity = transform.up * _speed * _inputMagnitude;
-    }
+    // private void FixedUpdate()
+    // {
+    //     _rb.velocity = transform.up * _speed * _inputMagnitude;
+    // }
 }

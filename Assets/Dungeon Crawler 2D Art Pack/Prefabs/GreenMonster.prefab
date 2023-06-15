@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 3909823470287347074}
   - component: {fileID: 744860525978950650}
   - component: {fileID: 7086322602162313997}
-  - component: {fileID: 8015809853090880841}
+  - component: {fileID: 7158895330470964556}
   m_Layer: 0
   m_Name: GreenMonster
   m_TagString: Untagged
@@ -156,7 +156,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.012406826}
   serializedVersion: 2
   m_Radius: 0.5873693
---- !u!114 &8015809853090880841
+--- !u!114 &7158895330470964556
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,6 +165,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 404358880672170731}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b0c88b24c0a8bc4db3207f062589172, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d980574a22f04e42b489eac7cffe6f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <TotalHealthPoints>k__BackingField: 5
+  speed: 0.1
