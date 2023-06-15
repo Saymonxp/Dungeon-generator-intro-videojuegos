@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Not yet used but may be useful in the future
     public static GameManager Instance;
+    public int difficulty = 1;
     private void Awake()
     {
         if(Instance == null) {
