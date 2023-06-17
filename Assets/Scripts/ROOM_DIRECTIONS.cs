@@ -1,0 +1,1 @@
+public enum ROOM_DIRECTIONS { UP = 0, RIGHT, DOWN, LEFT }
