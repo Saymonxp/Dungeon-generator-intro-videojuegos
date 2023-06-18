@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4777656561539712}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GreenMonster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,9 +45,9 @@ GameObject:
   - component: {fileID: 744860525978950650}
   - component: {fileID: 7086322602162313997}
   - component: {fileID: 7158895330470964556}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GreenMonster
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
