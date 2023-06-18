@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7075220499379756382}
   - component: {fileID: 7075220499379756377}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Player_Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 7075220499874166425}
   - component: {fileID: 7075220499874166430}
   - component: {fileID: 3630253763478516170}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 7
-  _collisionMaks:
+  _collisionMasks:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 128
   _lifeTime: 3

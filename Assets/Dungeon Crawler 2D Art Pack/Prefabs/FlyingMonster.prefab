@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4811327347987038}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FlyingMonster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,9 +45,9 @@ GameObject:
   - component: {fileID: 4418831511671466787}
   - component: {fileID: 3974056479318294290}
   - component: {fileID: 1121985783990309203}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FlyingMonster
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
