@@ -8,6 +8,7 @@ public class Player : MonoBehaviour, IDamageable
     [field:SerializeField]
     public Image LifeIndicator {get; private set; }
     public int HealthPoints { get; private set; }
+    public float DoubleHealthPoints { get; private set; }
     
     private void Start()
     {
@@ -20,20 +21,25 @@ public class Player : MonoBehaviour, IDamageable
             return;
     
         HealthPoints--;
+        Debug.Log("Vidas: " + HealthPoints + " Total vidas: " + TotalHealthPoints + " Porcentaje: " + DoubleHealthPoints);
+        UpdateLifeBar();
         if(HealthPoints <= 0)
             gameObject.SetActive(false);
     }
 
     public void AddLife()
     {
+         Debug.Log("Voy a aumentar la vida de " );
         if(HealthPoints + 1 > TotalHealthPoints)
             return;
     
         HealthPoints++;
+        UpdateLifeBar();
     }
 
-    void Update()
+    void UpdateLifeBar()
     {
-        LifeIndicator.fillAmount =  HealthPoints /  TotalHealthPoints;
+        DoubleHealthPoints = (float)HealthPoints / TotalHealthPoints;
+        LifeIndicator.fillAmount = DoubleHealthPoints;
     }
 }
