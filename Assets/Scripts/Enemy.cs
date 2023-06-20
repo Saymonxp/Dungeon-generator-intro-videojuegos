@@ -24,8 +24,8 @@ public class Enemy : MonoBehaviour, IDamageable
     private void Update()
     {
         if (HealthPoints <= 0) {
+            GameManager.Instance.Kills++;
             Destroy(gameObject);
-            // gameObject.SetActive(false);
         }
         Vector2 direction = player.position - transform.position;
         transform.position += (Vector3)direction * Time.deltaTime * speed;

@@ -7,6 +7,8 @@ public class Player : MonoBehaviour, IDamageable
     public int TotalHealthPoints { get; private set; }
     [field:SerializeField]
     public Image LifeIndicator {get; private set; }
+    [field:SerializeField]
+    public Text KillsText { get; private set;}
     public int HealthPoints { get; private set; }
     
     private void Start()
@@ -35,5 +37,6 @@ public class Player : MonoBehaviour, IDamageable
     void Update()
     {
         LifeIndicator.fillAmount =  HealthPoints /  TotalHealthPoints;
+        KillsText.text = GameManager.Instance.Kills.ToString();
     }
 }
