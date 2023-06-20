@@ -12,7 +12,7 @@ public class PlayerShooter : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetButtonDown("Fire1")) // Cuando da click 
+        if (Input.GetKeyDown("space")) // Cuando da espacio 
         {
             //Shoot
             GameObject projectile = Instantiate(_projectilePrefab); //Crea el proyectil
