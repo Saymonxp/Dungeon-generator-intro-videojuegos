@@ -171,5 +171,5 @@ MonoBehaviour:
   _speed: 7
   _collisionMaks:
     serializedVersion: 2
-    m_Bits: 1
-  _lifeTime: 3
+    m_Bits: 0
+  _lifeTime: 2
