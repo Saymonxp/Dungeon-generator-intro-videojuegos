@@ -70,6 +70,7 @@ public class GameManager : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPause = true;
+    }
     private void AddLife() {
         player.AddLife();
     }

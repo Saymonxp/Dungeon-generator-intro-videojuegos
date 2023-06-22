@@ -38,12 +38,18 @@ public class Player : MonoBehaviour, IDamageable
 
     public void AddLife()
     {
+        audioManager.selectAudio(5, 1.0f);
+        audioManager.selectAudio(5, 1.0f);
          Debug.Log("Voy a aumentar la vida de " );
         if(HealthPoints + 1 > TotalHealthPoints)
             return;
-        audioManager.selectAudio(5, 0.4f);
+        
         HealthPoints++;
         UpdateLifeBar();
+    }
+
+    void Update(){
+        KillsText.text = GameManager.Instance.Kills.ToString();
     }
 
     void UpdateLifeBar()
@@ -51,6 +57,6 @@ public class Player : MonoBehaviour, IDamageable
         DoubleHealthPoints = (float)HealthPoints / TotalHealthPoints;
         LifeIndicator.fillAmount = DoubleHealthPoints;
         LifeIndicator.fillAmount =  HealthPoints /  TotalHealthPoints;
-        KillsText.text = GameManager.Instance.Kills.ToString();
+        
     }
 }

@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Restringir a no diagonales
 
-        if (!(horizontal != 0 & vertical != 0)){
+      
 
 
             // Mantener posicion anterior
@@ -73,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
             
             _shooter.rotation = Quaternion.Euler(0,0,angle);
         
-        }
+        
     }
     
     private void FixedUpdate()

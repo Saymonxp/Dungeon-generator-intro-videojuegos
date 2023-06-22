@@ -16,9 +16,9 @@ public class Enemy : MonoBehaviour, IDamageable
     {
         HealthPoints = TotalHealthPoints;
         player = FindObjectOfType<Player>().transform;
-        GameObject[] spawnPoint = GameObject.FindGameObjectsWithTag("SpawnPoint");
-        int randomSpawnPoint = Random.Range(0, spawnPoint.Length);
-        transform.position = spawnPoint[randomSpawnPoint].transform.position;
+        // GameObject[] spawnPoint = GameObject.FindGameObjectsWithTag("SpawnPoint");
+        // int randomSpawnPoint = Random.Range(0, spawnPoint.Length);
+        // transform.position = spawnPoint[randomSpawnPoint].transform.position;
     }
 
     private void Update()
