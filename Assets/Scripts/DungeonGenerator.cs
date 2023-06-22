@@ -16,7 +16,6 @@ public class DungeonGenerator : MonoBehaviour
 
     private int maxRooms;
     private int nCurrentRooms;
-    // private int nDeadEnds = 3;
 
     private Queue<DungeonRoom> _pendingRooms;
     private List<DungeonRoom> _dungeonRooms;
@@ -27,6 +26,7 @@ public class DungeonGenerator : MonoBehaviour
     private List<GameObject> specialRoomsPrefabs;
     private List<GameObject> doorsPrefabs;
     public List<Enemy> enemyPrefabs;
+    public Enemy bossPrefab;
     private List<Enemy> _enemyInstances;
     #endregion
 
@@ -102,6 +102,7 @@ public class DungeonGenerator : MonoBehaviour
         GenerateSpecialRooms();
         InstantiateDungeon();
         InstantiateDoors();
+        SpawnBoss();
         SpawnEnemies();
     }
 
@@ -260,25 +261,6 @@ public class DungeonGenerator : MonoBehaviour
         }
     }
 
-    
-
-    // private bool HasOppositeNeighbours(DungeonRoom room)
-    // {
-    //     if (room.NeighboursCount == 2)
-    //     {
-    //         switch (room.Neighbours[0].Item1) 
-    //         {
-    //             case ROOM_DIRECTIONS.UP: return room.Neighbours[1].Item1 == ROOM_DIRECTIONS.DOWN;
-    //             case ROOM_DIRECTIONS.RIGHT: return room.Neighbours[1].Item1 == ROOM_DIRECTIONS.LEFT;
-    //             case ROOM_DIRECTIONS.DOWN: return room.Neighbours[1].Item1 == ROOM_DIRECTIONS.UP;
-    //             case ROOM_DIRECTIONS.LEFT: return room.Neighbours[1].Item1 == ROOM_DIRECTIONS.RIGHT;
-    //             default: return false;
-    //         }
-            
-    //     }
-    //     else return false;
-    // }
-
     private ROOM_DIRECTIONS GetRandomNeighbourDirection(DungeonRoom currentRoom)
     {
         bool found = false;
@@ -369,44 +351,27 @@ public class DungeonGenerator : MonoBehaviour
         }
     }
 
-    // private void SpawnSpecialRooms()
-    // {
-    //     _propInstances = new List<GameObject>();
-
-    //     for (int i = 0; i < _dungeonRooms.Count; ++i)
-    //     {
-    //         DungeonRoom room = _dungeonRooms[i];
-    //         if (room.type == RoomTypes.TREASURE)
-    //         {
-    //             _propInstances.Add(SpawnProp(PROPS_ID.TREASURECHEST, _dungeonRoomInstances[i].transform.position));
-    //         }
-    //         else if (room.type == RoomTypes.START)
-    //         {
-    //             _propInstances.Add(SpawnProp(PROPS_ID.BONFIRE, _dungeonRoomInstances[0].transform.position + Vector3.up*0.1f));
-    //             if (_dungeonRooms[0].NeighboursCount != 2)
-    //                 _propInstances.Add(SpawnProp(PROPS_ID.STARTROOMPROPS, _dungeonRoomInstances[0].transform.position));
-    //         }
-    //         else if (room.type == RoomTypes.BOSS)
-    //         {
-    //             // Spawn Boss Door
-    //             Transform roomTransform = _dungeonRoomInstances[i].transform;
-    //             Vector3 doorPosition = roomTransform.position + roomTransform.forward * 12;
-    //             float doorRotationY = roomTransform.eulerAngles.y;
-                
-    //             GameObject doorGo = SpawnProp(PROPS_ID.BOSSDOOR, doorPosition, Quaternion.Euler(0, doorRotationY, 0));
-    //             _propInstances.Add(doorGo);
-    //             // Spawn Boss Enemy
-    //             GameObject bossGo = SpawnEnemy(BOSS_ID.BOSS_BARBARIANGIANT, _dungeonRoomInstances[i].transform.position);
-    //             bossGo.GetComponent<Enemy>()?.SetType(ENEMY_TYPE.BOSS);
-    //             // Link door to enemy
-    //             doorGo.GetComponent<BossDoor>().LinkToEnemy(bossGo.GetComponent<Enemy>());
-    //         }
-    //     }
-    // }
-
     #endregion
 
     #region Enemies
+
+    private void SpawnBoss() {
+        GameObject enemiesParent = GameObject.Find("ENEMIES");
+        for (int i = 1; i < _dungeonRoomInstances.Count; ++i)
+        {
+            DungeonRoom room = _dungeonRooms[i];
+            GameObject _room = _dungeonRoomInstances[i];
+            if (room.type == RoomTypes.BOSS)
+            {
+                Transform spawn = _room.transform.Find("Spawnpoint");
+                Enemy e = Instantiate(bossPrefab, spawn.position, Quaternion.identity);
+                e.currRoom = _room.GetComponent<RoomsOnTriggerEnter>().instance;
+                e.transform.parent = enemiesParent.transform;
+            }
+            
+        }
+    }
+
     private void SpawnEnemies()
     {
         _enemyInstances = new List<Enemy>();
@@ -439,94 +404,11 @@ public class DungeonGenerator : MonoBehaviour
             }
         }
     }
-
+    
     private Enemy GetRandomEnemyPrefab()
     {
         int enemyCount = enemyPrefabs.Count;
         return enemyPrefabs[UnityEngine.Random.Range(0, enemyCount)];
     }
-    
-    // private GameObject SpawnEnemy(BOSS_ID bossId, Vector3 position)
-    // {
-    //     // TODO: Spawn Enemies
-    //     string bossPath = "Prefabs/Enemies/Bosses/";
-
-    //     var sb = new System.Text.StringBuilder();
-    //     sb.Append(bossPath).Append(bossId.ToString());
-
-    //     GameObject boss = Resources.Load<GameObject>(sb.ToString());
-    //     if (!ReferenceEquals(boss, null))
-    //         return Instantiate(boss, position, Quaternion.identity);
-    //     else
-    //         Debug.LogError("Boss prefab " + sb.ToString() + " could not be found in " + bossPath);
-    //     sb.Clear();
-    //     return null;
-    // }
-
-    // public Enemy GetClosestEnemyToPlayer()
-    // {
-    //     Vector3 playerPosition = ThirdPersonControllerMovement.s.transform.position;
-    //     Enemy result = _enemyInstances[0];
-    //     float minDistance = Vector3.Distance(playerPosition, result.transform.position);
-
-    //     for (int i = 1; i < _enemyInstances.Count; ++i)
-    //     {
-    //         Enemy currentEnemy = _enemyInstances[i];
-    //         float distance = Vector3.Distance(playerPosition, currentEnemy.transform.position);
-    //         if (distance < minDistance) { 
-    //             result = currentEnemy;
-    //             minDistance = distance;
-    //         }
-    //     }
-
-    //     return result;
-    // }
-    #endregion
-
-    // #region Special Rooms
-
-    // private GameObject SpawnProp(PROPS_ID propId, Vector3 position)
-    // {
-    //     return SpawnProp(propId, position, Quaternion.identity);
-    // }
-
-    // private GameObject SpawnProp(PROPS_ID propId, Vector3 position, Quaternion rotation)
-    // {
-    //     string propsPath = "Prefabs/Props/";
-        
-    //     var sb = new System.Text.StringBuilder();
-    //     sb.Append(propsPath).Append(propId.ToString());
-        
-    //     GameObject prop = Resources.Load<GameObject>(sb.ToString());
-    //     if (!ReferenceEquals(prop, null)) 
-    //     {
-    //         return Instantiate(prop, position, rotation); 
-    //     }
-    //     else
-    //         Debug.LogError("Prop prefab " + sb.ToString() + " could not be found in " + propsPath);
-    //     sb.Clear();
-
-    //     return null;
-    // }
-
-    // #endregion
-
-    // public void DeleteDungeon()
-    // {
-    //     try
-    //     {
-    //         foreach (GameObject go in _propInstances)
-    //             Destroy(go);
-
-    //         foreach (GameObject room in _dungeonRoomInstances)
-    //             Destroy(room);
-
-    //         foreach (Enemy enemy in _enemyInstances)
-    //             Destroy(enemy.gameObject);
-    //     }
-    //     catch (NullReferenceException e)
-    //     {
-    //         Debug.LogWarning("There is no dungeon to delete.");
-    //     }
-    // }
 }
+#endregion
