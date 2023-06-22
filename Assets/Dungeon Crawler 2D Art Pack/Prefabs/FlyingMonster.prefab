@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4811327347987038}
+  - component: {fileID: -3813233353018426635}
   m_Layer: 7
   m_Name: FlyingMonster
   m_TagString: Untagged
@@ -45,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <TotalHealthPoints>k__BackingField: 3
-  speed: 0
+  speed: 2
 --- !u!1 &7784388618673046924
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4777656561539712}
+  - component: {fileID: -999040512088890033}
   m_Layer: 7
   m_Name: GreenMonster
   m_TagString: Untagged
@@ -45,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <TotalHealthPoints>k__BackingField: 3
-  speed: 0
+  speed: 1
 --- !u!1 &404358880672170731
 GameObject:
   m_ObjectHideFlags: 0
