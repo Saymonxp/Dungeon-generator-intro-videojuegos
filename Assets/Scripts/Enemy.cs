@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour, IDamageable
     public int TotalHealthPoints { get; private set; }
     public int HealthPoints { get; private set; }
     [SerializeField] float speed = 1;
+    [SerializeField] Animator anim;
+    bool isDead = false;
 
     public RoomsOnTriggerEnter currRoom;
     public CameraController camera;
@@ -25,11 +27,13 @@ public class Enemy : MonoBehaviour, IDamageable
 
     private void Update()
     {
-        if (HealthPoints <= 0) {
+        anim.SetBool("Dead", isDead);
+        if (HealthPoints <= 0 && !isDead) {
             GameManager.Instance.Kills++;
-            Destroy(gameObject);
+            Destroy(gameObject, 7f);
+            isDead = true;
         }
-        if (camera.currRoom == currRoom)
+        if (camera.currRoom == currRoom && HealthPoints > 0)
         {
             Vector2 direction = player.position - transform.position;
             transform.position += (Vector3)direction * Time.deltaTime * speed;
