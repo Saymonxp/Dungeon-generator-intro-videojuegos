@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class RoomsOnTriggerEnter : MonoBehaviour
 {
+    public RoomsOnTriggerEnter instance;
     public float xPosition;
     public float yPosition;
     // Start is called before the first frame update
+    void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         xPosition = transform.position.x;

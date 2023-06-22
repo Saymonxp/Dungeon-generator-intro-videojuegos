@@ -431,6 +431,7 @@ public class DungeonGenerator : MonoBehaviour
                         {
                             Enemy e = Instantiate(GetRandomEnemyPrefab(), spawn.position, Quaternion.identity, enemiesParentObject.transform);
                             _enemyInstances.Add(e);
+                            e.currRoom = room.GetComponent<RoomsOnTriggerEnter>().instance;
                             e.transform.parent = enemiesParent.transform;
                         }
                     }

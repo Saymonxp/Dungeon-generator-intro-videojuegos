@@ -50,7 +50,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <TotalHealthPoints>k__BackingField: 3
-  speed: 0
+  speed: 0.5
+  currRoom: {fileID: 0}
+  camera: {fileID: 0}
 --- !u!212 &351154102934580058
 SpriteRenderer:
   m_ObjectHideFlags: 0
