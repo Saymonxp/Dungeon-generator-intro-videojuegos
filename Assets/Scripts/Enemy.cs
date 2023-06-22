@@ -10,10 +10,14 @@ public class Enemy : MonoBehaviour, IDamageable
     public int HealthPoints { get; private set; }
     [SerializeField] float speed = 1;
 
+    public RoomsOnTriggerEnter currRoom;
+    public CameraController camera;
+
     private void Start()
     {
         HealthPoints = TotalHealthPoints;
         player = FindObjectOfType<Player>().transform;
+        camera = FindObjectOfType<CameraController>();
         // GameObject[] spawnPoint = GameObject.FindGameObjectsWithTag("SpawnPoint");
         // int randomSpawnPoint = Random.Range(0, spawnPoint.Length);
         // transform.position = spawnPoint[randomSpawnPoint].transform.position;
@@ -25,8 +29,11 @@ public class Enemy : MonoBehaviour, IDamageable
             GameManager.Instance.Kills++;
             Destroy(gameObject);
         }
-        Vector2 direction = player.position - transform.position;
-        transform.position += (Vector3)direction * Time.deltaTime * speed;
+        if (camera.currRoom == currRoom)
+        {
+            Vector2 direction = player.position - transform.position;
+            transform.position += (Vector3)direction * Time.deltaTime * speed;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
