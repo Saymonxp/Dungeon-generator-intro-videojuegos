@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public static bool GameIsPause = false;
     public GameObject pauseMenuUI;
 
-    [SerializeField] int kills;
+    [SerializeField] int kills = 0;
 
     public int Kills {
         get => kills;
