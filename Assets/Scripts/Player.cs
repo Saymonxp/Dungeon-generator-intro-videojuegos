@@ -10,10 +10,13 @@ public class Player : MonoBehaviour, IDamageable
     public int HealthPoints { get; private set; }
     private AudioManager audioManager;
     
+    Animator _Animator;
+    
     private void Start()
     {
         HealthPoints = TotalHealthPoints;
         audioManager = FindObjectOfType<AudioManager>();
+        _Animator = gameObject.GetComponent<Animator>();
     }
     
     public void TakeHit()
@@ -21,9 +24,11 @@ public class Player : MonoBehaviour, IDamageable
         if(HealthPoints <= 0)
             return;
         audioManager.selectAudio(4, 0.4f);
+
         HealthPoints--;
         if(HealthPoints <= 0)
-            gameObject.SetActive(false);
+            _Animator.SetBool("Die", true);
+            //gameObject.SetActive(false);
     }
 
     public void AddLife()

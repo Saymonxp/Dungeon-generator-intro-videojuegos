@@ -19,7 +19,7 @@ public class PlayerShooter : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1")) // Cuando da click 
+        if (Input.GetKeyDown("space")) // Cuando da espacio 
         {
             //Shoot
             audioManager.selectAudio(3, 0.4f);
