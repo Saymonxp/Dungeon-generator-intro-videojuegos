@@ -9,11 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4811327347987038}
-  - component: {fileID: -3813233353018426635}
+  - component: {fileID: 3155513450258296219}
   - component: {fileID: 6160594056036784395}
   - component: {fileID: 7767933445896084652}
   - component: {fileID: 3109140859167934264}
   - component: {fileID: 7779355284721120643}
+  - component: {fileID: -2285924235454096749}
   m_Layer: 7
   m_Name: FlyingMonster
   m_TagString: Enemy
@@ -36,7 +37,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-3813233353018426635
+--- !u!114 &3155513450258296219
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,11 +46,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1548593766413804}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d980574a22f04e42b489eac7cffe6f2, type: 3}
+  m_Script: {fileID: 11500000, guid: 7085eade1603fbb43aed1fe428cb9863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   <TotalHealthPoints>k__BackingField: 3
-  speed: 0.5
+  speed: 0
 --- !u!212 &6160594056036784395
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -160,3 +161,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &-2285924235454096749
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548593766413804}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.23850262}
+  serializedVersion: 2
+  m_Radius: 0.5077621
