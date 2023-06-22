@@ -26,8 +26,8 @@ public class DungeonGenerator : MonoBehaviour
     private List<GameObject> roomPrefabs;
     private List<GameObject> specialRoomsPrefabs;
     private List<GameObject> doorsPrefabs;
-    // public List<Enemy> enemyPrefabs;
-    // private List<Enemy> _enemyInstances;
+    public List<Enemy> enemyPrefabs;
+    private List<Enemy> _enemyInstances;
     #endregion
 
     private void Awake()
@@ -102,7 +102,7 @@ public class DungeonGenerator : MonoBehaviour
         GenerateSpecialRooms();
         InstantiateDungeon();
         InstantiateDoors();
-        // SpawnEnemies();
+        SpawnEnemies();
     }
 
     private void GetSeed()
@@ -406,43 +406,45 @@ public class DungeonGenerator : MonoBehaviour
 
     #endregion
 
-    // #region Enemies
-    // private void SpawnEnemies()
-    // {
-    //     _enemyInstances = new List<Enemy>();
-    //     for (int i = 1; i < _dungeonRoomInstances.Count; ++i)
-    //     {
-    //         if (_dungeonRooms[i].NeighboursCount > 1) 
-    //         {
-    //             GameObject room = _dungeonRoomInstances[i];
-    //             GameObject enemiesParentObject = new GameObject("Enemy Instances");
-    //             enemiesParentObject.transform.parent = room.transform;
-    //             enemiesParentObject.transform.localPosition = Vector3.zero;
-    //             Transform enemySpawnsParent = room.transform.Find("EnemySpawnPoints");
-    //             if (!ReferenceEquals(enemySpawnsParent, null))
-    //             {
-    //                 List<Transform> enemySpawns = new List<Transform>(enemySpawnsParent.GetComponentsInChildren<Transform>());
-    //                 enemySpawns.RemoveAt(0);
+    #region Enemies
+    private void SpawnEnemies()
+    {
+        _enemyInstances = new List<Enemy>();
+        GameObject enemiesParent = GameObject.Find("ENEMIES");
+        for (int i = 1; i < _dungeonRoomInstances.Count; ++i)
+        {
+            if (_dungeonRooms[i].NeighboursCount > 1) 
+            {
+                GameObject room = _dungeonRoomInstances[i];
+                GameObject enemiesParentObject = new GameObject("Enemy Instances");
+                enemiesParentObject.transform.parent = room.transform;
+                enemiesParentObject.transform.localPosition = Vector3.zero;
+                Transform enemySpawnsParent = room.transform.Find("Spawnpoints");
+                if (!ReferenceEquals(enemySpawnsParent, null))
+                {
+                    List<Transform> enemySpawns = new List<Transform>(enemySpawnsParent.GetComponentsInChildren<Transform>());
+                    enemySpawns.RemoveAt(0);
 
-    //                 foreach (Transform spawn in enemySpawns)
-    //                 {
-    //                     if (UnityEngine.Random.Range(0f, 1f) <= 0.75f) 
-    //                     {
-    //                         Enemy e = Instantiate(GetRandomEnemyPrefab(), spawn.position, Quaternion.identity, enemiesParentObject.transform);
-    //                         e.SetType(ENEMY_TYPE.NORMAL);
-    //                         _enemyInstances.Add(e);
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
+                    foreach (Transform spawn in enemySpawns)
+                    {
+                        if (UnityEngine.Random.Range(0f, 1f) <= 0.85f) 
+                        {
+                            Enemy e = Instantiate(GetRandomEnemyPrefab(), spawn.position, Quaternion.identity, enemiesParentObject.transform);
+                            _enemyInstances.Add(e);
+                            e.currRoom = room.GetComponent<RoomsOnTriggerEnter>().instance;
+                            e.transform.parent = enemiesParent.transform;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
-    // private Enemy GetRandomEnemyPrefab()
-    // {
-    //     int enemyCount = enemyPrefabs.Count;
-    //     return enemyPrefabs[UnityEngine.Random.Range(0, enemyCount)];
-    // }
+    private Enemy GetRandomEnemyPrefab()
+    {
+        int enemyCount = enemyPrefabs.Count;
+        return enemyPrefabs[UnityEngine.Random.Range(0, enemyCount)];
+    }
     
     // private GameObject SpawnEnemy(BOSS_ID bossId, Vector3 position)
     // {
@@ -479,7 +481,7 @@ public class DungeonGenerator : MonoBehaviour
 
     //     return result;
     // }
-    // #endregion
+    #endregion
 
     // #region Special Rooms
 

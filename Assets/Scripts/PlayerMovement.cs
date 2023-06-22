@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
-    private float _speed = 1;
+    private float _speed = 5;
 
     [SerializeField]
     private Transform _shooter;
@@ -28,49 +28,56 @@ public class PlayerMovement : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
-        if (horizontal != 0 || vertical != 0){
-            _AuxHorizontal = horizontal;
-            _AuxVertical = vertical;
-        }
-        
-        Vector2 _dir  = new Vector2(_AuxHorizontal, _AuxVertical);
-        _dir.Normalize(); //Direction
+        // Restringir a no diagonales
+
+      
 
 
-        transform.position = new Vector3(transform.position.x  + Time.deltaTime * _speed * horizontal, transform.position.y  + Time.deltaTime * _speed * vertical, transform.position.z);
+            // Mantener posicion anterior
+            if (horizontal != 0 || vertical != 0){
+                _AuxHorizontal = horizontal;
+                _AuxVertical = vertical;
+            }
+            
+            Vector2 _dir  = new Vector2(_AuxHorizontal, _AuxVertical);
+            _dir.Normalize(); //Direction
 
-        if (vertical == -1){
-            _Animator.SetBool("Front", true);
-        } else if ( vertical == 1){
-            _Animator.SetBool("Back", true);
-        }
 
-        if (vertical == 0){
-            _Animator.SetBool("Front", false);
-            _Animator.SetBool("Back", false);
-        }
+            transform.position = new Vector3(transform.position.x  + Time.deltaTime * _speed * horizontal, transform.position.y  + Time.deltaTime * _speed * vertical, transform.position.z);
+            
+            // Lanzar animaciones
+            if (vertical == -1){
+                _Animator.SetBool("Front", true);
+            } else if ( vertical == 1){
+                _Animator.SetBool("Back", true);
+            }
 
-        if (horizontal == -1){
-            _Animator.SetBool("Left", true);
-        } else if ( horizontal == 1){
-            _Animator.SetBool("Right", true);
-        }
+            if (vertical == 0){
+                _Animator.SetBool("Front", false);
+                _Animator.SetBool("Back", false);
+            }
 
-        if (horizontal == 0){
-            _Animator.SetBool("Left", false);
-            _Animator.SetBool("Right", false);
-        }
+            if (horizontal == -1){
+                _Animator.SetBool("Left", true);
+            } else if ( horizontal == 1){
+                _Animator.SetBool("Right", true);
+            }
 
-        //ShootPoint Rotation
-        float angle = Mathf.Atan2(_dir.y, _dir.x) * Mathf.Rad2Deg - 90;
-        
-        _shooter.rotation = Quaternion.Euler(0,0,angle);
+            if (horizontal == 0){
+                _Animator.SetBool("Left", false);
+                _Animator.SetBool("Right", false);
+            }
+
+            //ShootPoint Rotation
+            float angle = Mathf.Atan2(_dir.y, _dir.x) * Mathf.Rad2Deg - 90;
+            
+            _shooter.rotation = Quaternion.Euler(0,0,angle);
         
         
     }
     
-    // private void FixedUpdate()
-    // {
-    //     _rb.velocity = transform.up * _speed * _inputMagnitude;
-    // }
+    private void FixedUpdate()
+    {
+        _rb.velocity = transform.up * _speed * _inputMagnitude;
+    }
 }
