@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4777656561539712}
+  - component: {fileID: -999040512088890033}
   m_Layer: 7
   m_Name: GreenMonster
   m_TagString: Untagged
@@ -58,7 +59,8 @@ GameObject:
   - component: {fileID: 3909823470287347074}
   - component: {fileID: 744860525978950650}
   - component: {fileID: 7086322602162313997}
-  - component: {fileID: 7158895330470964556}
+  - component: {fileID: 6066558037539279260}
+  - component: {fileID: 6248092905640262340}
   m_Layer: 7
   m_Name: GreenMonster
   m_TagString: Enemy
@@ -170,7 +172,28 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.012406826}
   serializedVersion: 2
   m_Radius: 0.5873693
---- !u!114 &7158895330470964556
+--- !u!50 &6066558037539279260
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404358880672170731}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &6248092905640262340
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -179,8 +202,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 404358880672170731}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d980574a22f04e42b489eac7cffe6f2, type: 3}
+  m_Script: {fileID: 11500000, guid: 41c14d467f167e94c85384f7da07c272, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <TotalHealthPoints>k__BackingField: 5
-  speed: 0.1
+  <TotalHealthPoints>k__BackingField: 0
+  speed: 1

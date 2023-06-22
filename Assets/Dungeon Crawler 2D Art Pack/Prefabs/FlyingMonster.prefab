@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4811327347987038}
+  - component: {fileID: -3813233353018426635}
   m_Layer: 7
   m_Name: FlyingMonster
   m_TagString: Untagged
@@ -58,7 +59,8 @@ GameObject:
   - component: {fileID: 7937045391287259478}
   - component: {fileID: 4418831511671466787}
   - component: {fileID: 3974056479318294290}
-  - component: {fileID: 1121985783990309203}
+  - component: {fileID: 5599348053028264941}
+  - component: {fileID: 5600034461001963267}
   m_Layer: 7
   m_Name: FlyingMonster
   m_TagString: Enemy
@@ -170,7 +172,28 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.23850262}
   serializedVersion: 2
   m_Radius: 0.5077621
---- !u!114 &1121985783990309203
+--- !u!50 &5599348053028264941
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784388618673046924}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &5600034461001963267
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -179,7 +202,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7784388618673046924}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d980574a22f04e42b489eac7cffe6f2, type: 3}
+  m_Script: {fileID: 11500000, guid: 7085eade1603fbb43aed1fe428cb9863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   <TotalHealthPoints>k__BackingField: 2
