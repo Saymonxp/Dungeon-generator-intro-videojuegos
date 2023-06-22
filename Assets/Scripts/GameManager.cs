@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+
+    public Player player;
+    
     public int difficulty = 1;
 
     public static bool GameIsPause = false;
@@ -56,5 +59,7 @@ public class GameManager : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPause = true;
+    private void AddLife() {
+        player.AddLife();
     }
 }

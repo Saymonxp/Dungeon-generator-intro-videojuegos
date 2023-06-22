@@ -11,6 +11,7 @@ public class Player : MonoBehaviour, IDamageable
     private AudioManager audioManager;
     
     Animator _Animator;
+    public float DoubleHealthPoints { get; private set; }
     
     private void Start()
     {
@@ -26,6 +27,8 @@ public class Player : MonoBehaviour, IDamageable
         audioManager.selectAudio(4, 0.4f);
 
         HealthPoints--;
+        Debug.Log("Vidas: " + HealthPoints + " Total vidas: " + TotalHealthPoints + " Porcentaje: " + DoubleHealthPoints);
+        UpdateLifeBar();
         if(HealthPoints <= 0)
             _Animator.SetBool("Die", true);
             //gameObject.SetActive(false);
@@ -33,14 +36,17 @@ public class Player : MonoBehaviour, IDamageable
 
     public void AddLife()
     {
+         Debug.Log("Voy a aumentar la vida de " );
         if(HealthPoints + 1 > TotalHealthPoints)
             return;
         audioManager.selectAudio(5, 0.4f);
         HealthPoints++;
+        UpdateLifeBar();
     }
 
-    void Update()
+    void UpdateLifeBar()
     {
-        LifeIndicator.fillAmount =  HealthPoints /  TotalHealthPoints;
+        DoubleHealthPoints = (float)HealthPoints / TotalHealthPoints;
+        LifeIndicator.fillAmount = DoubleHealthPoints;
     }
 }

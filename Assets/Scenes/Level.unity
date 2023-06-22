@@ -729,6 +729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c2c5c99d9f2bb40b714e2b94a94905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   difficulty: 1
   pauseMenuUI: {fileID: 445854426}
 --- !u!4 &1304128788
@@ -1066,12 +1067,16 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6525142999283524762, guid: 1ba41a98de36df54baae69a45ef30d3b, type: 3}
+      propertyPath: <HealthPoints>k__BackingField
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525142999283524762, guid: 1ba41a98de36df54baae69a45ef30d3b, type: 3}
       propertyPath: <LifeIndicator>k__BackingField
       value: 
       objectReference: {fileID: 481950263}
     - target: {fileID: 6525142999283524762, guid: 1ba41a98de36df54baae69a45ef30d3b, type: 3}
       propertyPath: <TotalHealthPoints>k__BackingField
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6525142999283524763, guid: 1ba41a98de36df54baae69a45ef30d3b, type: 3}
       propertyPath: _speed
