@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
 
     private void Start() {
         pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     void Update()
