@@ -9,6 +9,7 @@ public class Player : MonoBehaviour, IDamageable
     public Image LifeIndicator {get; private set; }
     [field:SerializeField]
     public Text KillsText { get; private set;}
+    [field:SerializeField]    
     public int HealthPoints { get; private set; }
     private AudioManager audioManager;
     
@@ -26,7 +27,7 @@ public class Player : MonoBehaviour, IDamageable
     {
         if(HealthPoints <= 0)
             return;
-        audioManager.selectAudio(4, 0.4f);
+        audioManager.selectAudio(4, 1.0f);
 
         HealthPoints--;
         Debug.Log("Vidas: " + HealthPoints + " Total vidas: " + TotalHealthPoints + " Porcentaje: " + DoubleHealthPoints);
@@ -38,8 +39,8 @@ public class Player : MonoBehaviour, IDamageable
 
     public void AddLife()
     {
-        audioManager.selectAudio(5, 1.0f);
-        audioManager.selectAudio(5, 1.0f);
+        audioManager.selectAudio(5, 1.5f);
+        audioManager.selectAudio(5, 1.5f);
          Debug.Log("Voy a aumentar la vida de " );
         if(HealthPoints + 1 > TotalHealthPoints)
             return;

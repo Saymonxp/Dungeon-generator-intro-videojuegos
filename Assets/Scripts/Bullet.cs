@@ -62,7 +62,7 @@ public class Bullet : MonoBehaviour
                 targetHit.TakeHit();
             }
             if (hit.collider.gameObject.CompareTag("Enemy")) {
-                hit.collider.gameObject.GetComponent<Enemy>().TakeHit();
+                hit.collider.gameObject.GetComponent<IDamageable>().TakeHit();
             }            
             Debug.Log("Hit with " + hit.collider.name);
             DestroyProjectile();

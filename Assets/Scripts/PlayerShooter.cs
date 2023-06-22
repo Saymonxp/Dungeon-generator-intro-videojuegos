@@ -22,7 +22,7 @@ public class PlayerShooter : MonoBehaviour
         if (Input.GetKeyDown("space")) // Cuando da espacio 
         {
             //Shoot
-            audioManager.selectAudio(3, 0.4f);
+            audioManager.selectAudio(3, 0.7f);
             GameObject projectile = Instantiate(_projectilePrefab); //Crea el proyectil
             projectile.transform.position = _shootPoint.position;
             projectile.transform.rotation = _shootPoint.rotation;

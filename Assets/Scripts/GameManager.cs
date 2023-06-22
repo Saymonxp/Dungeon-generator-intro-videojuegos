@@ -14,6 +14,11 @@ public class GameManager : MonoBehaviour
     public static bool GameIsPause = false;
     public GameObject pauseMenuUI;
 
+    public GameObject gameOverUI;
+    public bool isDead; //Pa que solo salga el gameOver una vez
+
+    public GameObject winUI;
+
     [SerializeField] int kills;
 
     public int Kills {
@@ -45,18 +50,16 @@ public class GameManager : MonoBehaviour
                 Pause();
             }
         }
-    }
 
-    //Start Menu
-    public void PlayGame()
-    {
-        SceneManager.LoadScene("Level");
-    }
 
-    public void QuitGame ()
-    {
-        Debug.Log("QUIT");
-        Application.Quit();
+        //Si muere pierde
+        if (player.HealthPoints <= 0  && !isDead){
+            isDead = true;
+            gameOver();
+        }
+
+        //Si mata al boss gana
+        
     }
 
     //Pause Menu
@@ -71,7 +74,37 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPause = true;
     }
+
+    //Game Over Menu
+    public void gameOver(){
+        gameOverUI.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    //Win Menu
+    public void Win(){
+        winUI.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void restart(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void home(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+    public void QuitGame ()
+    {
+        Debug.Log("QUIT");
+        Application.Quit();
+    }
+
+    //Add Life
     private void AddLife() {
         player.AddLife();
     }
+
+
 }

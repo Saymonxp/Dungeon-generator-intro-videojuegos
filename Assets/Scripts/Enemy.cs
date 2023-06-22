@@ -5,10 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour, IDamageable
 {
     Transform player;
-    [field:SerializeField]
-    
+    [field:SerializeField]    
     public int TotalHealthPoints { get; private set; }
-
     public int HealthPoints { get; private set; }
     [SerializeField] float speed = 1;
 
@@ -29,6 +27,14 @@ public class Enemy : MonoBehaviour, IDamageable
         }
         Vector2 direction = player.position - transform.position;
         transform.position += (Vector3)direction * Time.deltaTime * speed;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            collision.GetComponent<IDamageable>().TakeHit();
+        }
     }
     
     public void TakeHit() 

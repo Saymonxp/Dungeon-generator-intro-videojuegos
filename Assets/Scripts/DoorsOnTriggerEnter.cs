@@ -18,16 +18,19 @@ public class DoorsOnTriggerEnter : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.isTrigger);
-        if (other.isTrigger)
+        if (other.CompareTag("Player"))
         {
-            other.isTrigger = false;
+            Debug.Log(other.isTrigger);
+            if (other.isTrigger)
+            {
+                other.isTrigger = false;
+            }
+            else
+            {
+                other.isTrigger = true;
+            }
+            Debug.Log(other.isTrigger);
         }
-        else
-        {
-            other.isTrigger = true;
-        }
-        Debug.Log(other.isTrigger);
     }
 
 }
