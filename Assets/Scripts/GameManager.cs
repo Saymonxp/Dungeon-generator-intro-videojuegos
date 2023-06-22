@@ -14,6 +14,17 @@ public class GameManager : MonoBehaviour
     public static bool GameIsPause = false;
     public GameObject pauseMenuUI;
 
+    [SerializeField] int kills;
+
+    public int Kills {
+        get => kills;
+        set {
+            kills = value;
+            if(kills % 10 == 0) {
+                difficulty++;
+            }
+        }
+    }
     private void Awake()
     {
         if(Instance == null) {
