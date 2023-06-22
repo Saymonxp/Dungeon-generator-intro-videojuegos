@@ -9,6 +9,7 @@ public class Player : MonoBehaviour, IDamageable
     public Image LifeIndicator {get; private set; }
     [field:SerializeField]
     public Text KillsText { get; private set;}
+    [field:SerializeField]    
     public int HealthPoints { get; private set; }
     private AudioManager audioManager;
     
