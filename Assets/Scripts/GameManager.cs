@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
 
     [Range(0, 60)] public int corpsesDisappearTime = 7;
     [SerializeField] int kills = 0;
-    [SerializeField] int points;
+    [SerializeField] int points = 0;
 
     public int Kills {
         get => kills;

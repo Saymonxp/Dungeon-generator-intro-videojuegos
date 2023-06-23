@@ -16,9 +16,12 @@ public class BossMonster : Enemy, IDamageable
         anim.SetBool("Dead", isDead);
         if (HealthPoints <= 0 && !isDead) {
             GameManager.Instance.Kills++;
+            GameManager.Instance.Points+=8;
             audioManager.selectAudio(7, 1.8f);
             Destroy(gameObject, GameManager.Instance.corpsesDisappearTime);
             isDead = true;
+            Debug.Log("Voy a mostrar el secreen");
+            GameManager.Instance.Win();
         }
         if (camera.currRoom == currRoom && !isDead)
         {
@@ -26,6 +29,7 @@ public class BossMonster : Enemy, IDamageable
             transform.position += (Vector3)direction.normalized * Time.deltaTime * speed;
         }
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
