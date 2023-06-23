@@ -16,6 +16,7 @@ public class GreenMonster : Enemy, IDamageable
         anim.SetBool("Dead", isDead);
         if (HealthPoints <= 0 && !isDead) {
             GameManager.Instance.Kills++;
+            GameManager.Instance.Points+=2;
             audioManager.selectAudio(11, 1.8f);
             Destroy(gameObject, GameManager.Instance.corpsesDisappearTime);
             isDead = true;

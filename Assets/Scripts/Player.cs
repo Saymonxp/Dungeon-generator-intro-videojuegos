@@ -9,7 +9,8 @@ public class Player : MonoBehaviour, IDamageable
     public Image LifeIndicator {get; private set; }
     [field:SerializeField]
     public Text KillsText { get; private set;}
-    [field:SerializeField]    
+    [field:SerializeField]
+    public Text PointsText { get; private set;}
     public int HealthPoints { get; private set; }
     private AudioManager audioManager;
     
@@ -27,10 +28,8 @@ public class Player : MonoBehaviour, IDamageable
     {
         if(HealthPoints <= 0)
             return;
-        audioManager.selectAudio(4, 1.0f);
-
+        audioManager.selectAudio(4, 1.5f);
         HealthPoints--;
-        Debug.Log("Vidas: " + HealthPoints + " Total vidas: " + TotalHealthPoints + " Porcentaje: " + DoubleHealthPoints);
         UpdateLifeBar();
         if(HealthPoints <= 0)
             _Animator.SetBool("Die", true);
@@ -41,9 +40,8 @@ public class Player : MonoBehaviour, IDamageable
     {
         audioManager.selectAudio(5, 1.5f);
         audioManager.selectAudio(5, 1.5f);
-         Debug.Log("Voy a aumentar la vida de " );
         if(HealthPoints + 1 > TotalHealthPoints)
-            return;
+            GameManager.Instance.Points+=5;
         
         HealthPoints++;
         UpdateLifeBar();
@@ -51,13 +49,13 @@ public class Player : MonoBehaviour, IDamageable
 
     void Update(){
         KillsText.text = GameManager.Instance.Kills.ToString();
+        PointsText.text = GameManager.Instance.Points.ToString();
     }
 
     void UpdateLifeBar()
     {
         DoubleHealthPoints = (float)HealthPoints / TotalHealthPoints;
         LifeIndicator.fillAmount = DoubleHealthPoints;
-        LifeIndicator.fillAmount =  HealthPoints /  TotalHealthPoints;
         
     }
 }
