@@ -49,8 +49,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7085eade1603fbb43aed1fe428cb9863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   <TotalHealthPoints>k__BackingField: 3
-  speed: 0.7
+  speed: 2
   anim: {fileID: 7767933445896084652}
   currRoom: {fileID: 0}
   camera: {fileID: 0}
@@ -177,6 +178,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.23850262}
+  m_Offset: {x: 0, y: 0.2}
   serializedVersion: 2
-  m_Radius: 0.5077621
+  m_Radius: 0.5507762

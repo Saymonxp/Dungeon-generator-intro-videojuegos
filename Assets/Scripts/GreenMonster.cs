@@ -13,20 +13,23 @@ public class GreenMonster : Enemy, IDamageable
 
     private void Update()
     {
-        if (HealthPoints <= 0) {
+        anim.SetBool("Dead", isDead);
+        if (HealthPoints <= 0 && !isDead) {
             GameManager.Instance.Kills++;
-            Destroy(gameObject);
+            audioManager.selectAudio(11, 1.8f);
+            Destroy(gameObject, GameManager.Instance.corpsesDisappearTime);
+            isDead = true;
         }
-        if (camera.currRoom == currRoom)
+        if (camera.currRoom == currRoom && !isDead)
         {
             Vector2 direction = player.position - transform.position;
-            transform.position += (Vector3)direction * Time.deltaTime * speed;
+            transform.position += (Vector3)direction.normalized * Time.deltaTime * speed;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (!isDead && collision.CompareTag("Player"))
         {
             audioManager.selectAudio(10, 1.0f);
             collision.GetComponent<IDamageable>().TakeHit();

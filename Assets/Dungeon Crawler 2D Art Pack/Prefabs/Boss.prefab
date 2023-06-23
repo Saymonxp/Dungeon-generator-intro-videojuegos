@@ -49,8 +49,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01d93a52fabc34a47b4ff54d89ec2ad3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   <TotalHealthPoints>k__BackingField: 15
-  speed: 0.8
+  speed: 1.5
   anim: {fileID: 95171608050424218}
   currRoom: {fileID: 0}
   camera: {fileID: 0}
@@ -140,7 +141,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.009596884, y: -0.02148724}
+  m_Offset: {x: -0.0289222, y: -0.053695917}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -151,7 +152,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.093653, y: 2.161831}
+  m_Size: {x: 1.7457986, y: 1.7366757}
   m_EdgeRadius: 0
 --- !u!50 &9164857856437195255
 Rigidbody2D:
@@ -187,7 +188,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.009596825, y: -0.021487236}
+  m_Offset: {x: -0.009596825, y: -0.040812492}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -198,5 +199,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.0936532, y: 2.1618314}
+  m_Size: {x: 2.0936532, y: 2.200482}
   m_EdgeRadius: 0
