@@ -41,9 +41,13 @@ public class Player : MonoBehaviour, IDamageable
         audioManager.selectAudio(5, 1.5f);
         audioManager.selectAudio(5, 1.5f);
         if(HealthPoints + 1 > TotalHealthPoints)
+        {
             GameManager.Instance.Points+=5;
-        
-        HealthPoints++;
+        }
+        if (HealthPoints < TotalHealthPoints)
+        {
+            HealthPoints++;
+        }
         UpdateLifeBar();
     }
 
