@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject winUI;
 
+    [Range(0, 60)] public int corpsesDisappearTime = 7;
     [SerializeField] int kills = 0;
 
     public int Kills {
