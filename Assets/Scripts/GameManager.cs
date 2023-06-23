@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -64,8 +65,17 @@ public class GameManager : MonoBehaviour
 
         //Si muere pierde
         if (player.HealthPoints <= 0  && !isDead){
-            isDead = true;
-            gameOver();
+            StartCoroutine(ExampleCoroutine());
+
+            IEnumerator ExampleCoroutine()
+            {
+                isDead = true;
+                //yield on a new YieldInstruction that waits for 5 seconds.
+                yield return new WaitForSeconds(0.25f);
+
+                gameOver();
+            }
+            
         }
 
         //Si mata al boss gana
