@@ -9,7 +9,8 @@ public class Player : MonoBehaviour, IDamageable
     public Image LifeIndicator {get; private set; }
     [field:SerializeField]
     public Text KillsText { get; private set;}
-    [field:SerializeField]    
+    [field:SerializeField]
+    public Text PointsText { get; private set;}
     public int HealthPoints { get; private set; }
     private AudioManager audioManager;
     
@@ -40,7 +41,7 @@ public class Player : MonoBehaviour, IDamageable
         audioManager.selectAudio(5, 1.5f);
         audioManager.selectAudio(5, 1.5f);
         if(HealthPoints + 1 > TotalHealthPoints)
-            return;
+            GameManager.Instance.Points+=5;
         
         HealthPoints++;
         UpdateLifeBar();
@@ -48,6 +49,7 @@ public class Player : MonoBehaviour, IDamageable
 
     void Update(){
         KillsText.text = GameManager.Instance.Kills.ToString();
+        PointsText.text = GameManager.Instance.Points.ToString();
     }
 
     void UpdateLifeBar()

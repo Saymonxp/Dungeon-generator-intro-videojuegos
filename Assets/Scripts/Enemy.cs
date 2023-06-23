@@ -27,6 +27,7 @@ public class Enemy : MonoBehaviour, IDamageable
     {
         if (HealthPoints <= 0) {
             GameManager.Instance.Kills++;
+            GameManager.Instance.Points+=2;
             Destroy(gameObject);
         }
         if (camera.currRoom == currRoom)

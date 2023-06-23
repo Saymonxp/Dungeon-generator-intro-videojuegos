@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public GameObject winUI;
 
     [SerializeField] int kills;
+    [SerializeField] int points;
 
     public int Kills {
         get => kills;
@@ -28,6 +29,13 @@ public class GameManager : MonoBehaviour
             if(kills % 10 == 0) {
                 difficulty++;
             }
+        }
+    }
+
+     public int Points {
+        get => points;
+        set {
+            points = value;
         }
     }
     private void Awake()
