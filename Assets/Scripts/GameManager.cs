@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject winUI;
 
-    [SerializeField] int kills;
+    [SerializeField] int kills = 0;
 
     public int Kills {
         get => kills;
