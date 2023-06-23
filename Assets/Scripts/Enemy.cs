@@ -5,12 +5,12 @@ using UnityEngine;
 public class Enemy : MonoBehaviour, IDamageable
 {
     Transform player;
-    [field:SerializeField]    
+    [field:SerializeField]   
     public int TotalHealthPoints { get; private set; }
     public int HealthPoints { get; private set; }
     [SerializeField] float speed = 1;
-    [SerializeField] Animator anim;
-    bool isDead = false;
+    [SerializeField] protected Animator anim;
+    protected bool isDead = false;
 
     public RoomsOnTriggerEnter currRoom;
     public CameraController camera;
@@ -20,9 +20,6 @@ public class Enemy : MonoBehaviour, IDamageable
         HealthPoints = TotalHealthPoints;
         player = FindObjectOfType<Player>().transform;
         camera = FindObjectOfType<CameraController>();
-        // GameObject[] spawnPoint = GameObject.FindGameObjectsWithTag("SpawnPoint");
-        // int randomSpawnPoint = Random.Range(0, spawnPoint.Length);
-        // transform.position = spawnPoint[randomSpawnPoint].transform.position;
     }
 
     private void Update()
@@ -30,19 +27,19 @@ public class Enemy : MonoBehaviour, IDamageable
         anim.SetBool("Dead", isDead);
         if (HealthPoints <= 0 && !isDead) {
             GameManager.Instance.Kills++;
-            Destroy(gameObject, 7f);
+            Destroy(gameObject, GameManager.Instance.corpsesDisappearTime);
             isDead = true;
         }
-        if (camera.currRoom == currRoom && HealthPoints > 0)
+        if (camera.currRoom == currRoom && !isDead)
         {
             Vector2 direction = player.position - transform.position;
-            transform.position += (Vector3)direction * Time.deltaTime * speed;
+            transform.position += (Vector3)direction.normalized * Time.deltaTime * speed;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (!isDead && collision.CompareTag("Player"))
         {
             collision.GetComponent<IDamageable>().TakeHit();
         }

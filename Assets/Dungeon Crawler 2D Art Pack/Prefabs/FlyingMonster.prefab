@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <TotalHealthPoints>k__BackingField: 3
-  speed: 0.5
+  speed: 0.7
   anim: {fileID: 7767933445896084652}
   currRoom: {fileID: 0}
   camera: {fileID: 0}

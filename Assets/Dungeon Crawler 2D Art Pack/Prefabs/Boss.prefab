@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5406397468248402935}
   m_Layer: 7
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <TotalHealthPoints>k__BackingField: 15
-  speed: 0.05
+  speed: 0.8
   anim: {fileID: 95171608050424218}
   currRoom: {fileID: 0}
   camera: {fileID: 0}
@@ -140,7 +140,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.08386749}
+  m_Offset: {x: -0.009596884, y: -0.02148724}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -151,7 +151,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.5331979, y: 2.286592}
+  m_Size: {x: 2.093653, y: 2.161831}
   m_EdgeRadius: 0
 --- !u!50 &9164857856437195255
 Rigidbody2D:
@@ -187,7 +187,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.08386749}
+  m_Offset: {x: -0.009596825, y: -0.021487236}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -198,5 +198,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.533198, y: 2.286592}
+  m_Size: {x: 2.0936532, y: 2.1618314}
   m_EdgeRadius: 0

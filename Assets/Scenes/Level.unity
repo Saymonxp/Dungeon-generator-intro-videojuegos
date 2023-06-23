@@ -1741,6 +1741,7 @@ MonoBehaviour:
   gameOverUI: {fileID: 557268561}
   isDead: 0
   winUI: {fileID: 0}
+  corpsesDisappearTime: 34
   kills: 0
 --- !u!4 &1304128788
 Transform:
