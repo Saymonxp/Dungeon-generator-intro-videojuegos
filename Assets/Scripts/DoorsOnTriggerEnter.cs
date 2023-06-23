@@ -20,7 +20,7 @@ public class DoorsOnTriggerEnter : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log(other.isTrigger);
+            // Debug.Log(other.isTrigger);
             if (other.isTrigger)
             {
                 other.isTrigger = false;
@@ -29,7 +29,7 @@ public class DoorsOnTriggerEnter : MonoBehaviour
             {
                 other.isTrigger = true;
             }
-            Debug.Log(other.isTrigger);
+            // Debug.Log(other.isTrigger);
         }
     }
 

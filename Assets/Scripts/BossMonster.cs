@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlyingMonster : Enemy, IDamageable
+public class BossMonster : Enemy, IDamageable
 {
     private AudioManager audioManager;
 
@@ -16,7 +16,7 @@ public class FlyingMonster : Enemy, IDamageable
         anim.SetBool("Dead", isDead);
         if (HealthPoints <= 0 && !isDead) {
             GameManager.Instance.Kills++;
-            audioManager.selectAudio(9, 1.8f);
+            audioManager.selectAudio(7, 1.8f);
             Destroy(gameObject, GameManager.Instance.corpsesDisappearTime);
             isDead = true;
         }
@@ -31,14 +31,31 @@ public class FlyingMonster : Enemy, IDamageable
     {
         if (!isDead && collision.CompareTag("Player"))
         {
-            audioManager.selectAudio(8, 1.0f);
+            audioManager.selectAudio(6, 2.5f);
             collision.GetComponent<IDamageable>().TakeHit();
         }
     }
     
     public void TakeHit() 
     {
-        audioManager.selectAudio(9, 1.0f);
+        audioManager.selectAudio(7, 2.5f);
         HealthPoints--;
     }
+    
+    // float currentSpeed;
+    // Rigidbody2D rigidBody;
+
+    // private void Start()
+    // {
+    //     rigidBody = GetComponent<Rigidbody2D>();
+    // }
+    // private void Update()
+    // {
+    //     currentSpeed = rigidBody.velocity.magnitude;
+    //     Debug.Log("Boss currentSpeed: " + currentSpeed.ToString());
+    //     if (!isDead)
+    //     {
+    //         anim.SetFloat("CurrentSpeed", (float)currentSpeed);
+    //     }
+    // }
 }

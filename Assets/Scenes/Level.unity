@@ -343,7 +343,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0065163374, y: -0.100055575}
@@ -951,7 +951,7 @@ GameObject:
   - component: {fileID: 671958594}
   - component: {fileID: 671958595}
   m_Layer: 0
-  m_Name: CONTROLLER
+  m_Name: DUNGEONCONTROLLER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -970,7 +970,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &671958595
 MonoBehaviour:
@@ -989,6 +989,7 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 3155513450258296219, guid: a2a3dd4b2b2a74041a57a6a0639b13b9, type: 3}
   - {fileID: 1021064619596448358, guid: 0ce5d754465073341bc8f66affe39967, type: 3}
+  bossPrefab: {fileID: 7754834039734717652, guid: dcf76343326e5514abbe873a7967f41b, type: 3}
 --- !u!1 &760763466
 GameObject:
   m_ObjectHideFlags: 0
@@ -1527,6 +1528,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ee97361fb8343f74db195ccdfdac32f4, type: 3}
   - {fileID: 8300000, guid: d639f7e372c1bba4ea6c4d86f62e8466, type: 3}
   - {fileID: 8300000, guid: ef464f2db739e614f883bf45149b63b9, type: 3}
+  - {fileID: 8300000, guid: fe43bf0be9152324485d0610bcb31fd0, type: 3}
+  - {fileID: 8300000, guid: f6e35df35ee9f7749a9e20ea588c7a20, type: 3}
+  - {fileID: 8300000, guid: 400f77398ad6bdb43ac43804aa38140e, type: 3}
+  - {fileID: 8300000, guid: e722e9c022474604790138842f2d5746, type: 3}
+  - {fileID: 8300000, guid: 7362e1bd3d64e354e9375239d86ed0f0, type: 3}
+  - {fileID: 8300000, guid: 484749dc7b507a94db9165345730449d, type: 3}
 --- !u!4 &1069287364
 Transform:
   m_ObjectHideFlags: 0
@@ -1740,6 +1747,7 @@ MonoBehaviour:
   gameOverUI: {fileID: 557268561}
   isDead: 0
   winUI: {fileID: 0}
+  corpsesDisappearTime: 2
   kills: 0
 --- !u!4 &1304128788
 Transform:
@@ -2569,7 +2577,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6522218482854452800, guid: 1ba41a98de36df54baae69a45ef30d3b, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6522218482854452800, guid: 1ba41a98de36df54baae69a45ef30d3b, type: 3}
       propertyPath: m_LocalPosition.x

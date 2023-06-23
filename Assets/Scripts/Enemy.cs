@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour, IDamageable
+public class Enemy : MonoBehaviour
 {
-    Transform player;
+    public Transform player;
     [field:SerializeField]    
-    public int TotalHealthPoints { get; private set; }
-    public int HealthPoints { get; private set; }
-    [SerializeField] float speed = 1;
+    public int TotalHealthPoints { get;  set; }
+    public int HealthPoints { get;  set; }
+    [SerializeField] public float speed = 1;
+    [SerializeField] protected Animator anim;
+    protected bool isDead = false;
 
     public RoomsOnTriggerEnter currRoom;
     public CameraController camera;
@@ -18,34 +20,6 @@ public class Enemy : MonoBehaviour, IDamageable
         HealthPoints = TotalHealthPoints;
         player = FindObjectOfType<Player>().transform;
         camera = FindObjectOfType<CameraController>();
-        // GameObject[] spawnPoint = GameObject.FindGameObjectsWithTag("SpawnPoint");
-        // int randomSpawnPoint = Random.Range(0, spawnPoint.Length);
-        // transform.position = spawnPoint[randomSpawnPoint].transform.position;
     }
 
-    private void Update()
-    {
-        if (HealthPoints <= 0) {
-            GameManager.Instance.Kills++;
-            Destroy(gameObject);
-        }
-        if (camera.currRoom == currRoom)
-        {
-            Vector2 direction = player.position - transform.position;
-            transform.position += (Vector3)direction * Time.deltaTime * speed;
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            collision.GetComponent<IDamageable>().TakeHit();
-        }
-    }
-    
-    public void TakeHit() 
-    {
-        HealthPoints--;
-    }
 }
