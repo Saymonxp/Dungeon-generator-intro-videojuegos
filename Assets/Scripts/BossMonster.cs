@@ -6,6 +6,24 @@ public class BossMonster : Enemy, IDamageable
 {
     private AudioManager audioManager;
 
+    IEnumerator ExampleCoroutine()
+    {
+        Debug.Log("Coroutine started");
+
+        yield return new WaitForSeconds(5f);
+
+        Debug.Log("Coroutine resumed after 2.5 seconds");
+        if (isDead) {
+            Debug.Log("Si está muerto");
+
+            GameManager.Instance.Win();
+        }
+
+        // Additional code or actions after the delay
+
+        yield return null;
+    }
+
     private void Awake()
     {
         audioManager = FindObjectOfType<AudioManager>();
@@ -21,7 +39,7 @@ public class BossMonster : Enemy, IDamageable
             Destroy(gameObject, GameManager.Instance.corpsesDisappearTime);
             isDead = true;
             Debug.Log("Voy a mostrar el secreen");
-            GameManager.Instance.Win();
+            StartCoroutine(ExampleCoroutine());
         }
         if (camera.currRoom == currRoom && !isDead)
         {
