@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
 
     [Range(0, 60)] public int corpsesDisappearTime = 7;
     [SerializeField] int kills = 0;
-    [SerializeField] int points;
+    [SerializeField] int points = 0;
 
     public int Kills {
         get => kills;
@@ -103,6 +103,16 @@ public class GameManager : MonoBehaviour
 
     //Win Menu
     public void Win(){
+        StartCoroutine(ExampleCoroutine());
+    }
+
+    IEnumerator ExampleCoroutine()
+    {
+        Debug.Log("Coroutine started");
+
+        yield return new WaitForSeconds(2.5f);
+
+        Debug.Log("Coroutine resumed after 2.5 seconds");
         winUI.SetActive(true);
         Time.timeScale = 0f;
     }
