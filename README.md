@@ -1,4 +1,7 @@
 # Cosmic Odyssey
+
+![](https://github.com/Saymonxp/Dungeon-generator-intro-videojuegos/blob/ab58fc241ece55b73a3143c77eb12575372ded0c/Cosmic%20Odyssey.png)
+
 En un futuro lejano, la humanidad ha logrado colonizar diferentes planetas y expandir su dominio a través de la galaxia. Durante una misión de exploración en los confines del espacio, la nave estelar Odyssey es sorprendida por una tormenta espacial de magnitudes nunca antes vistas. La nave se ve gravemente dañada y pierde el rumbo, desviándose hacia una región desconocida del universo.
 
 Con los sistemas críticamente dañados, la tripulación de la Odyssey se despierta de la criosuspensión solo para descubrir que su nave ha sido invadida por una horda de alienígenas hostiles y grotescos. Estos monstruos de aspecto abominable se arrastran desde las profundidades de la nave y acechan en sus sombrías esquinas.
@@ -25,4 +28,4 @@ Proyecto final de la materia Introducción a la Creación de Videjuegos (2023-1)
   * https://opengameart.org/content/monster-sound-pack-volume-1
   * https://opengameart.org/content/monster-sound-effects-2
 ## Gameplay
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)
+[![Watch the video](https://github.com/Saymonxp/Dungeon-generator-intro-videojuegos/blob/ab58fc241ece55b73a3143c77eb12575372ded0c/Cosmic%20Odyssey.png)](https://drive.google.com/file/d/1amRi_Pixtch66YNoawD71HM78UWEDtmx/view?usp=sharing)
