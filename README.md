@@ -9,7 +9,7 @@ Con los sistemas críticamente dañados, la tripulación de la Odyssey se despie
 El protagonista del juego, un valiente astronauta cuyo nombre se ha perdido en las grabaciones dañadas, se encuentra solo. La comunicación con el resto de la tripulación se ha perdido, y ahora debe enfrentarse a esta horda de criaturas alienígenas para salvar su propia vida y, posiblemente, encontrar una forma de regresar a casa.
 
 ## Descripción
-Proyecto final de la materia Introducción a la Creación de Videjuegos (2023-1). Se construyó un prototipo de videjuego Roguelike-Roguelite al estilo de The Binding of Isaac en el que se encarna a un astronauta, el cual debe recorrer las salas de su nave mientras se enfrenta a temibles monstros alienígenas. La generación se realiza de forma procedimental, por lo que cada partida es una experiencia única.
+Proyecto final de la materia Introducción a la Creación de Videojuegos (2023-1). Se construyó un prototipo de videjuego Roguelike-Roguelite al estilo de The Binding of Isaac en el que se encarna a un astronauta, el cual debe recorrer las salas de su nave mientras se enfrenta a temibles monstros alienígenas. La generación se realiza de forma procedimental, por lo que cada partida es una experiencia única.
 
 ## Recursos
 - Se utilizó Unity en su versión 2021.3.18f1
