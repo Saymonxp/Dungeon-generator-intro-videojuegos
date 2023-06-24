@@ -93,6 +93,16 @@ public class GameManager : MonoBehaviour
 
     //Win Menu
     public void Win(){
+        StartCoroutine(ExampleCoroutine());
+    }
+
+    IEnumerator ExampleCoroutine()
+    {
+        Debug.Log("Coroutine started");
+
+        yield return new WaitForSeconds(2.5f);
+
+        Debug.Log("Coroutine resumed after 2.5 seconds");
         winUI.SetActive(true);
         Time.timeScale = 0f;
     }
